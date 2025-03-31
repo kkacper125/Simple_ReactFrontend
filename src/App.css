@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.slider {
+    position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.slider__left-value,
+.slider__right-value {
+  color: #000000;
+  font-size: 12px;
+  margin-top: 20px;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider__left-value {
+  left: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.slider__right-value {
+  right: -4px;
 }
 
-.card {
-  padding: 2em;
+.slider__track,
+.slider__range {
+    border-radius: 3px;
+    height: 5px;
+    position: absolute;
 }
 
-.read-the-docs {
-  color: #888;
+.slider__track {
+    background-color: #fafafa;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider__range {
+    background-color: #1b7772;
+    z-index: 2;
+}
+
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    pointer-events: none;
+    height: 0;
+    outline: none;
+}
+
+.thumb-zindex-3 {
+    z-index: 3;
+}
+
+.thumb-zindex-4 {
+    z-index: 4; 
+}
+
+.thumb-zindex-5 {
+    z-index: 5;
+}  
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+    background-color: #e6a05f;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+    background-color: #e4ba5f;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+}
+
+.table{
+    height: fit-content;
 }
